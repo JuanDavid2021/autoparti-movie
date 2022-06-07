@@ -1,0 +1,22 @@
+.searchbar{
+  
+  margin-left: 300px;
+}
+
+.searchbar-movie{
+  display: flex;  
+}
+
+.searchbar-movie h3 {
+ margin-top: 40px; 
+}
+
+.searchbar-movie input{
+ margin-left: 20%;
+ margin-top: 50px;
+ border-radius: 10px;
+ width:30%;
+ height: 30px;
+ border:none;
+ box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+}

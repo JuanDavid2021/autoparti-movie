@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getMovieName, getFilm } from '../../redux/movieList';
-import "./Searchbar.scss"
+import "./Searchbar.scss";
+import {FontAwesomeIcon, fontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBell} from "@fortawesome/free-solid-svg-icons"
 
 export const Searchbar = () => {
 
@@ -12,21 +14,16 @@ export const Searchbar = () => {
  
  const handleChange = (e)=>{
   setInput(e.target.value)
-  console.log(input) 
   setType(true)
   dispatch(getMovieName(input))
- }
-
- const films=(e)=>{
- e.preventDefault(e)
- dispatch(getFilm())
  }
 
 
   return (
     <div className='searchbar'>
       <div className='searchbar-movie'>
-          <button onClick={(e)=>films(e)}>Films</button>
+          <h1>Films</h1>
+          <FontAwesomeIcon icon={faBell}/>
           <input type="text" placeholder='Search' value={input} name="input" onChange={(e)=>handleChange(e)}></input>
       </div>
       <h3>New Releases</h3>

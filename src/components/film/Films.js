@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {data} from "../../data"
-import "./Home.scss";
+import "./Films.scss";
 import {Link} from "react-router-dom"
 
 
@@ -10,22 +10,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { MovieCard } from '../movieCard/MovieCard';
 import { ShowMovies } from '../showMovies/ShowMovies';
 
-export const Home = () => {
+export const Films = () => {
+
 
   const dispatch = useDispatch()
- 
+
   
   useEffect(()=>{
-    dispatch(getMovie())
+    dispatch(getFilm())
   },[dispatch])
 
 
   return (
     <div className="container-all">
-  
+    
+    
     <Searchbar/>
     
-    <ShowMovies/>
+
+   <ShowMovies/>
 
     </div>
   )

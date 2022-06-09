@@ -10,6 +10,7 @@ export const ShowMovies = () => {
   
     const base_url = "https://image.tmdb.org/t/p/original"
     const {list} = useSelector(state=>state.movieList)
+    console.log(list)
   
 
     return (
@@ -27,7 +28,7 @@ export const ShowMovies = () => {
 
     <div className='all-movies'> 
       {
-     list.length> 0 ? list.slice(0,16).map(movie=>(
+     list.length> 1 ? list.slice(0,16).map(movie=>(
       <Link to ={`/detail/${movie.id}`} key={movie.id}> 
       <MovieCard movie={movie} key={movie.id} base_url={base_url}/>
       </Link>
@@ -36,7 +37,7 @@ export const ShowMovies = () => {
       <h1 className='not-found'>no existen peliculas con el nombre que ingresaste</h1>
       <img src={image} style={{height:"80px", alignSelf:"center"}}/>
       </div>
-      : <h1 className='loading'>Loading...</h1>}
+      : list[0]=== null ? <h1 className='loading'>Loading...</h1>: null}
     </div>
      
   </div>

@@ -4,7 +4,7 @@ import axios from "axios"
 export const movieSlice = createSlice({
   name: "movieList",
   initialState:{
-  list:[]     
+  list:[null]     
   },
   reducers: {
      setMovieList: (state, action)=>{
@@ -30,7 +30,7 @@ export const getMovie =()=>async(dispatch)=>{
   .then((response)=>{
     dispatch(setMovieList(response.data.results))  
   })
-  .catch(dispatch(setMovieList(0)))}
+   .catch((error)=>console.log(error)) }
 
   export const getFilm =()=> async(dispatch)=>{
    await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_APIKEY}&language=es&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=2021-09-01&primary_release_date.lte=2021-12-31`)

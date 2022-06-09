@@ -23,8 +23,8 @@ export const Searchbar = () => {
     <div className='searchbar'>
       <div className='searchbar-movie'>
           <h1>Films</h1>
-          <FontAwesomeIcon icon={faMagnifyingGlass} className="searchGlass"/>
-          <input type="text" placeholder='Search' value={input} name="input" onChange={(e)=>handleChange(e)}></input>
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="searchGlass"/>
+            <input type="text" placeholder='Search' value={input} name="input" onChange={(e)=>handleChange(e)}></input>
       </div>
       <h3>New Releases</h3>
     </div>

@@ -4,7 +4,7 @@
 }
 
 .searchbar-movie{
-  display: flex;  
+  display: flex; 
 }
 
 .searchbar-movie h3 {
@@ -26,9 +26,13 @@
  .searchGlass{
  color:rgb(198, 192, 192);
  position: absolute;
- margin-top: 23px;
- margin-left:360px 
+ margin-top: 20px;
+ margin-left:23%; 
 } 
+
+
+
+
 
 @media (max-width:600px){
   .searchbar-movie{
@@ -39,6 +43,7 @@
     margin-left: 0px;
     padding-left: 30px;
     width:80%;
+    
    }
 
    .searchGlass{
@@ -49,3 +54,17 @@
    }
 
 }
+
+ @media (min-width:600px) and (max-width:900px){
+  .searchGlass{
+
+    margin-left:27% 
+   } 
+} 
+
+@media (min-width:900px) and (max-width:1350px){
+  .searchGlass{
+
+    margin-left:25% 
+   } 
+} 

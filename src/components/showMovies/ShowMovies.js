@@ -10,7 +10,6 @@ export const ShowMovies = () => {
   
     const base_url = "https://image.tmdb.org/t/p/original"
     const {list} = useSelector(state=>state.movieList)
-    console.log(list)
   
 
     return (

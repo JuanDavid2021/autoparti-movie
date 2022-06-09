@@ -2,7 +2,7 @@
 
 Aplicación para buscar películas, ver los detalles y trailers.
 
-# Link deploy : https://vercel.com/juandavid2021/autoparti-movie
+# Link deploy : https://autoparti-movie.vercel.app/
 
 # Tecnologías
 

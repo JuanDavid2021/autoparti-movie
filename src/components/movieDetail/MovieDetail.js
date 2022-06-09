@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import {getTrailer} from '../../redux/getTrailer'
 import { getDetail } from '../../redux/movieDetail'
 import "./MovieDetail.scss"
+import logo from "../assets/not_found.jpg"
 
 export const MovieDetail = () => {
 
@@ -13,6 +14,7 @@ export const MovieDetail = () => {
   const video = useSelector(state=>state.video)
 
   const [open, setOpen] =useState(false)
+  const [trailer, setTrailer] = useState(true)
 
   const {id} = useParams()
 
@@ -30,15 +32,22 @@ export const MovieDetail = () => {
  } 
 
   const openModal =()=>{
+  if(video.video.length>1)
   setOpen(true)
-
+  else{
+  setTrailer(false)  
+  }
  }
 
   return (
     <div className='container-detail'>
-      <img src = {`${base_url}${state.detail.poster_path}`} />
-
+  
+       {
+       state.detail.poster_path===null?(<img src={logo}/>)
+       : (<img src = {`${base_url}${state.detail.poster_path}`} />)
+      } 
       <div className='movie-detail'>
+
         <h1>NAME: {state.detail.original_title}</h1>
         <h3>Id</h3> <p>{state.detail.id}</p> 
         <h3>language:</h3><p>{state.detail.original_language}</p>
@@ -48,9 +57,7 @@ export const MovieDetail = () => {
         <h3>status:</h3><p>{state.detail.status}</p>
         <h3>Runtime:</h3><p>{state.detail.runtime} minutes</p>
 
-        
-    
-<button type="button" onClick={openModal} className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+<button type="button" onClick={openModal} className="btn btn-primary btn-trailer" data-toggle="modal" data-target="#exampleModalLong">
   Ver Trailer
 </button>
 
@@ -72,7 +79,9 @@ export const MovieDetail = () => {
                 height={"500px"}
                 id="videoModal" 
                   >
-              </iframe> : null
+              </iframe> 
+              : trailer===false? 
+              <h1>trailer is not available</h1>:null
             }   
               </div>
               <div className="modal-footer">

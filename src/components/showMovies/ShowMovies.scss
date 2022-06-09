@@ -1,56 +1,46 @@
-.release{
-    display: block;  
-   }
-   
-   .container-all{
-    padding-top: 0;
-   }
-   
-   .release img {
+
+  /*  .release{
     padding-left: 0;
     border-radius: 10px;
     margin-right: 12px;
     margin-left: 12px;
-    width: 620px;
-    height:280px;
-   }
-
-   .estreno1{
-    /* object-fit:cover; 
-    object-position: bottom;  */
-    width:400px;
-    height: 180px;       
-   }
-
-    .estreno2{
-    width:400px;
-    height: 180px;    
-  /*   object-fit: cover;
-    object-position: bottom;  */  
+    width: 50%;
+    height: 20%;
    } 
+    */
+   
+    .releaseTwo{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    }
 
-   .img-responsive{
-    background-size: cover;  
+    .release{
+      width:95%;
+      height: 280px;
+      border-radius: 10px;
+      margin-left: 10px;
+    }
+
+   .all-movies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 25px;
+    padding-right: 30px;
+    column-gap: -10px 
    }
-   
-   .movie-container{
-     display: inline;
-     margin-top: 10px;
-     margin-left: 3px;  
+
+   .not-found{
+     color: red;
+     display: block;
+     width:100%;
+     margin-left: 20%;
+     margin-top: 10%;
    }
-   
-   .movie-container img {
-    margin-top: 10px;
-    padding:0;
-    border-radius: 10px;    
-    display: inline ;
-    width:140px;
-    height:230px;
-    margin-left: 5px;
-   
+
+   .loading{
+    display: block;
+    width:100%;
+    margin-left: 20%;
+    margin-top: 10%;
    }
-   
-   .container-show{
-   margin-top: 0; 
-   padding-top: 10px; 
-   }
+  

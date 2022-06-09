@@ -1,5 +1,5 @@
 .searchbar{
-  margin-top: 40px;
+  margin-top: 10px;
   margin-left: 15px;
 }
 
@@ -14,9 +14,17 @@
 .searchbar-movie input{
  margin-left: 20%;
  margin-top: 15px;
+ padding-left: 40px;
  border-radius: 10px;
  width:30%;
  height: 30px;
  border:none;
  box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+}
+
+.searchGlass{
+ color:rgb(198, 192, 192);
+ position: absolute;
+ margin-top: 23px;
+ margin-left:360px 
 }

@@ -16,7 +16,7 @@ function App() {
     <div className="container-app">
       <Sidebar/>
       <Routes>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route exact path="/detail/:id" element={<MovieDetail/>}/>   
         <Route exact path="/films" element={<Films/>}/>
       </Routes>

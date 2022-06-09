@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getMovieName, getFilm } from '../../redux/movieList';
+import { getMovieName} from '../../redux/movieList';
 import "./Searchbar.scss";
-import {FontAwesomeIcon, fontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBell} from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
 
 export const Searchbar = () => {
 
@@ -23,7 +23,7 @@ export const Searchbar = () => {
     <div className='searchbar'>
       <div className='searchbar-movie'>
           <h1>Films</h1>
-          <FontAwesomeIcon icon={faBell}/>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="searchGlass"/>
           <input type="text" placeholder='Search' value={input} name="input" onChange={(e)=>handleChange(e)}></input>
       </div>
       <h3>New Releases</h3>

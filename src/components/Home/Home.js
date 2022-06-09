@@ -8,9 +8,11 @@ import { ShowMovies } from '../showMovies/ShowMovies';
 export const Home = () => {
 
   const dispatch = useDispatch()
- 
+ const api = process.env.REACT_APP_API_KEY
   useEffect(()=>{
+
     dispatch(getMovie())
+    console.log(api)
   },[dispatch])
 
 

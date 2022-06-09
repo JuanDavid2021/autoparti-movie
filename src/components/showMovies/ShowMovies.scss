@@ -1,14 +1,4 @@
 
-  /*  .release{
-    padding-left: 0;
-    border-radius: 10px;
-    margin-right: 12px;
-    margin-left: 12px;
-    width: 50%;
-    height: 20%;
-   } 
-    */
-   
     .releaseTwo{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -21,22 +11,28 @@
       margin-left: 10px;
     }
 
-   .all-movies{
+    .all-movies{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     padding-left: 25px;
     padding-right: 30px;
     column-gap: -10px 
-   }
+   } 
 
    .not-found{
      color: red;
      display: block;
      width:100%;
-     margin-left: 20%;
+     margin-left: 10%;
      margin-top: 10%;
    }
 
+    .not-found-all{
+     display: flex;
+     width:600px;
+     text-align: center;
+    }
+  
    .loading{
     display: block;
     width:100%;
@@ -44,3 +40,38 @@
     margin-top: 10%;
    }
   
+@media (min-width:600px) and (max-width:1024px){
+  .all-movies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 25px;
+    padding-right: 30px;
+    column-gap: -10px 
+   }
+}
+
+@media (max-width:600px){
+  .all-movies{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 25px;
+    padding-right: 30px;
+    column-gap: -10px 
+   }
+
+   .releaseTwo{
+    display:grid;
+    grid-template-columns: 1fr;
+    }
+    .release{
+      margin-bottom: 10px;
+    }
+  
+   .not-found-all h1 {
+    font-size: small; 
+   }
+   .not-found-all{
+     width: 30%
+   }  
+   
+}

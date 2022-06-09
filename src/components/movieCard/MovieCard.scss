@@ -15,3 +15,9 @@
     padding-left: 2%;
    }
 
+
+   @media (min-width:500px) and (max-width:600px){
+    .movie-container img {
+      height:300px;
+    }
+   }

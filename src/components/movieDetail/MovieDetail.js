@@ -46,7 +46,7 @@ export const MovieDetail = () => {
        state.detail.poster_path===null?(<img src={logo}/>)
        : (<img src = {`${base_url}${state.detail.poster_path}`} />)
       } 
-      <div className='movie-detail'>
+       <div className='movie-detail'>
 
         <h1>NAME: {state.detail.original_title}</h1>
         <h3>Id</h3> <p>{state.detail.id}</p> 
@@ -56,11 +56,12 @@ export const MovieDetail = () => {
         <h3>Release:</h3><p>{state.detail.release_date}</p>
         <h3>status:</h3><p>{state.detail.status}</p>
         <h3>Runtime:</h3><p>{state.detail.runtime} minutes</p>
-
-<button type="button" onClick={openModal} className="btn btn-primary btn-trailer" data-toggle="modal" data-target="#exampleModalLong">
-  Ver Trailer
-</button>
-
+    
+        <button type="button" onClick={openModal} className="btn btn-primary btn-trailer" data-toggle="modal" data-target="#exampleModalLong">
+          Ver Trailer
+        </button>
+      </div> 
+   
         <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" onClick={closeModal}  aria-hidden="true">
           <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
@@ -92,6 +93,5 @@ export const MovieDetail = () => {
         </div>
 
       </div>
-    </div>
   )
 }

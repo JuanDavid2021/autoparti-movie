@@ -8,6 +8,6 @@ export const MovieCard = ({movie,base_url}) => {
         {movie.poster_path ? (<img src={`${base_url}${movie.poster_path}`}/>) 
         : (<img src={logo}/>)
         }
-    </div>
+    </div> 
   )
 }

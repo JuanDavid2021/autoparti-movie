@@ -32,9 +32,9 @@ export const ShowMovies = () => {
       <MovieCard movie={movie} key={movie.id} base_url={base_url}/>
       </Link>
     )): list.length=== 0? 
-      <div style={{display:"flex"}}>
+      <div className="not-found-all">
       <h1 className='not-found'>no existen peliculas con el nombre que ingresaste</h1>
-      <img src={image} style={{height:"100px", alignSelf:"center"}}/>
+      <img src={image} style={{height:"80px", alignSelf:"center"}}/>
       </div>
       : <h1 className='loading'>Loading...</h1>}
     </div>
